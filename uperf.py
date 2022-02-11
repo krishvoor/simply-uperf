@@ -62,6 +62,7 @@ def _avg_out(doc):
     out = {
             "norm_ltcy_p95": numpy.percentile(norm_ltcy_list, 95),
             "norm_ltcy_p99": numpy.percentile(norm_ltcy_list, 99),
+            "norm_ltcy_avg": numpy.average(norm_ltcy_list),
             "norm_byte_avg": convert_size(numpy.average(norm_byte_list)*8)
     }
     return out
