@@ -19,12 +19,12 @@ export THREAD=$thr
 export SERVER=$h
 
 envsubst < uperf-$ttype.xml | cat - > uperf.xml
-echo "$ttype result of $packet packets on $thr thread"
+echo "$ttype result of $packet packets on $thr thread to server $h"
 for i in $(seq 1 3)
 do
 python3 uperf.py
-echo "----------------------------------------"
 done
+echo "----------------------------------------"
 done
 done
 done
