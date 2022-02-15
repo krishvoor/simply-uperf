@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<profile name="uperf-tcp-128-128-1">
+  <group nthreads="$THREAD">
+    <transaction iterations="1">
+	 <flowop type="connect" options="remotehost=$SERVER protocol=tcp port=30001"/>
+    </transaction>
+    <transaction duration="60s">
+    	<flowop type="write" options="count=16 size=$PACKET" />
+    </transaction>
+    <transaction iterations="1">
+       <flowop type="disconnect" />
+    </transaction>
+  </group>
+</profile>
